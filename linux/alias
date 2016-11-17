@@ -1,3 +1,4 @@
 #!/bin/bash
 
+# opens a file or URL in the user's preferred application, see man xdg-open
 alias ']'='xdg-open'
