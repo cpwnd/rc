@@ -2,3 +2,25 @@
 
 # opens a file or URL in the user's preferred application, see man xdg-open
 alias ']'='xdg-open'
+
+# git
+gcom() {
+  git commit -m $1
+}
+
+alias gst='git status'
+
+gcou() {
+  git checkout $1
+}
+
+gac() {
+  git add $1
+  git commit
+}
+
+# convert any-ffmpeg-format to mp3
+ffmpeg-mp3() {
+
+  ffmpeg -i $1
+}
