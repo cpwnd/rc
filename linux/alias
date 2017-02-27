@@ -24,3 +24,7 @@ ffmpeg-mp3() {
 
   ffmpeg -i $1
 }
+
+pubip() {
+curl ipinfo.io/ip
+}
