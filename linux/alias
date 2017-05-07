@@ -25,6 +25,15 @@ ffmpeg-mp3() {
   ffmpeg -i $1
 }
 
+# public ip
 pubip() {
-curl ipinfo.io/ip
+    curl ipinfo.io/ip
+}
+
+pdf2png() {
+    # cut filename
+    STR=$1
+    PNGPATH=${STR:0:-4}
+    echo "Generating $PNGPATH.png"
+    convert $1 -density 300 $PNGPATH
 }
