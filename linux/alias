@@ -37,3 +37,7 @@ pdf2png() {
     echo "Generating $PNGPATH.png"
     convert $1 -density 300 $PNGPATH
 }
+
+ls-apt-pkg() {
+comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
+}
