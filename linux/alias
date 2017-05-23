@@ -38,8 +38,9 @@ pdf2png() {
     convert $1 -density 300 $PNGPATH
 }
 
+# list all user installed packages
 ls-apt-pkg() {
-comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
+    comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
 }
 
 py3-configure() {
