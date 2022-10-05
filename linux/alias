@@ -108,5 +108,5 @@ append() {
 
 # Downloads music via youtube-dl and converts with ffmpeg to mp3
 ytdl() {
-  youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "${1}"
+youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail "${1}"
 }
